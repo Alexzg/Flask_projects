@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Sign Up{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+  <form class="container" method="post">
+    <label class="col-3 text-warning" for="username">Username:</label>
+    <input name="username" id="username" required>
+	<br>
+    <label class="col-3 text-warning" for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+	<br>
+    <input class="btn btn-outline-secondary" type="submit" value="Submit">
+  </form>
+{% endblock %}

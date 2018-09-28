@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Board{% endblock %}</h2>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('board.create') }}">New</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for data in entry %}
+    <article class="data text-warning">
+      <header>
+        <div>
+          <h3>Title: {{ data['title'] }}</h3>
+          <div class="about">by {{ data['username'] }} on {{ data['created'].strftime('%Y-%m-%d') }}</div>
+        </div>
+		<p class="content">Content: {{ data['content'] }}</p>
+        {% if g.user['id'] == data['operator_id'] %}
+          <a class="action" href="{{ url_for('board.update', id=data['id']) }}">Edit</a>
+        {% endif %}
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

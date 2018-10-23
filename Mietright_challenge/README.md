@@ -1,6 +1,6 @@
 # Mietright code challenge
 ## Content
-* [Challenge question](#challenge-overview)
+* [Challenge overview](#challenge-overview)
 * [Languages/Frameworks](#languages-and-frameworks)
 * [Directory structure](#directory-structure)
 * [Code overview](#code-overview)

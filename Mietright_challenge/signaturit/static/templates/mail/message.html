@@ -1,0 +1,8 @@
+<h1>message.html</h1>
+<img src={{url_for('static', filename='images/logo_200_200.png', _external=True)}} alt="logo">
+<p>Email no: {{user_email}}</p>
+<hr>
+<p>Click the button to sign the needed document<p>
+<form action="http://127.0.0.1:5000/signaturit/{{token}}/form">
+    <input type="submit" value="Test HMTL5 button" />
+</form>

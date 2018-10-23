@@ -1,11 +1,6 @@
-### Django ###
-*.log
-*.pot
-*.pyc
-__pycache__/
-local_settings.py
-db.sqlite3
-media
+# Mietright_challenge
+.sqlite
+python_environment/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

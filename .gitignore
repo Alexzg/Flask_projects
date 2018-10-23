@@ -1,3 +1,7 @@
+# Mietright_challenge
+.sqlite
+python_environment/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -82,7 +86,6 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-python_environment/
 .env
 .venv
 env/

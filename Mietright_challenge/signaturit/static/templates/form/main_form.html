@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Main form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+<body class="container align-center" style="background-color: cyan;">
+	<section class="container" style="background-color: white; padding: 10px; border-radius: 1%;">
+		<h1 class="">main_form.html</h1>
+		<div class="row" style="margin: 10px;">
+			<img src={{url_for('static', filename="images/logo_200_200.png")}} style="width: auto; height: 70px; border-radius: 50%; border: solid 1px yellow;" class="">
+			<h2 style="margin: auto 2px auto 2px;" class="">Download & Sign the paper</h2>
+		</div>
+		<a style="text-decoration: none;" href={{url_for('static', filename="documents/Muster_Schutzbrief_Mieterhöhung.pdf")}} download>
+			<button class="btn btn-outline-info">Download document</button></a>
+		<hr>
+		<form class="container" method="post">
+			<label for="signed_doc_img"><h3>Upload photo of the signed document:</h3></label><br>
+			<input type="file" name="signed_doc_img" accept="image/*" required>
+			<br><br>
+			<input class="btn btn-warning btn-md" type="submit"/>
+		</form>
+	</section>
+</body>
